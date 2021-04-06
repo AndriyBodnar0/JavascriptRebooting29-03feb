@@ -99,19 +99,40 @@
 // }
 
 // ------------------------------------------------------------------------------
-let objectin = (array) => {
-    for (const arayKey of array) {
-     for (const arayKeyKey in arayKey) {
-        console.log(arayKeyKey)
-        }
-    }return
-}
-const newarray = objectin([{name: 'Dima', age: 13}, {model: 'Camry'}])
-console.log(newarray)
+// let objectin = (array) => {
+// let key =[];
+//     for (const arayKey of array) {
+//      for (const arayKeyKey in arayKey) {
+//                 key.push(arayKeyKey)
+//             }
+//         }return console.log(key)
+// }
+// const newarray = objectin([{name: 'Dima', age: 13}, {model: 'Camry'}])
+
 
 // 10) Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+// ---------------------------------для себе---------------------------------------------------
+// let array = [{name: 'Dima', age: 13}, {model: 'Camry'}]
+// for (const arrayElement of array) {
+//         for (const arrayElementElement in arrayElement) {
+//             console.log(arrayElement[arrayElementElement])
+//}
+// }
+// ------------------------------------------------------------------------------------
+
+// let valuesObject = (array) => {
+//     let key = [];
+//     for (const arrayElement of array) {
+//         for (const arrayElementElement in arrayElement) {
+//                 key.push(arrayElement[arrayElementElement])
+//             }
+//         }return key
+// }
+// let newarray = valuesObject([{name: 'Dima', age: 13}, {model: 'Camry'}]);
+// console.log(newarray)
+
 // 11) створити функцію  яка скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 //     EXAMPLE:
 // [1,2,3,4]
@@ -119,30 +140,63 @@ console.log(newarray)
 // результат
 //     [3,5,7,9]
 //
-//
+// const sumarray = (array1, array2) => {
+//     let sum = [];
+//     for (let i = 0; i < array1.length; i++) {
+//         sum.push(array1[i] + array2[i])
+//     }return sum
+// }
+// let newtask = sumarray([1,2,3,4],[2,3,4,5])
+// console.log(newtask)
 // ============================================================================================
-//
-// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+//- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
-//     Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
+//   Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
 // - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
-//
+//   EXAMPLE:
+//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // Приклад
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
+
 //
 // - Дано список імен.
 // let n1 = '    Harry       Potter      '
 // let n2 = '    Ron       Whisley      '
-// let n3 = '    Hermione       Granger      '
+// let n3 = '    Hermione       Granger
+
 // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
 //
+
+// let n1 = '     Harry       Potter      ';
+// let n2 = '    Ron       Whisley      ';
+// let n3 = '    Hermione       Granger      ';
+//
+//
+//  let checkString = (str) => {
+//      let newstr = [];
+//      let string = str.split(' ')
+//      for (const stringElement of string) {
+//          if (stringElement !== "")
+//              newstr.push(stringElement);
+//      }
+//      let joinstr = newstr.join(' ');
+//      return console.log(joinstr)
+//  }
+//
+// checkString(n1);
+// checkString(n2);
+// checkString(n3);
+
 // ============================================================================================
 //
 //
@@ -176,3 +230,5 @@ console.log(newarray)
 // 3) Flat
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+//         }
+//     }
