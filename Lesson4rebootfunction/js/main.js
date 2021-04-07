@@ -156,7 +156,7 @@
 //- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 //  походу так  умова незрозуміла
 // function numbers() {
-//     let min = arguments[0];
+//     let min = arguments[0]; //псевдо масив,і непрацює у стрілочних ф-ях ()=>{},Он похож на массив, но не обладает ни одним из его свойств, кроме length .
 //     for (const key in arguments) {
 //         if (min < arguments[key])min = arguments[key];
 //     }
@@ -203,6 +203,21 @@
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
 
+// let funkzero =(array) => {
+//     let numberArray =[];
+//     let zeroArray =[];
+//     for (const element of array){
+//         if (element !== 0){
+//             numberArray.push(element);
+//         }else zeroArray.push(element)
+//
+//     }
+//         let newarray = numberArray.concat(zeroArray)
+//     return console.log(newarray)
+// }
+// funkzero([1,0,6,0,3])
+// funkzero([0,1,2,3,4])
+// funkzero([0,0,1,0])
 //
 // - Дано список імен.
 // let n1 = '    Harry       Potter      '
