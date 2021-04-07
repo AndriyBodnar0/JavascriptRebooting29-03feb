@@ -196,6 +196,17 @@
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 
+// function arrayShuffle(array, i) {
+//     if(i < array.length){
+//     let container = array[i]
+//     array[i] = array[i + 1]
+//     array[i + 1] = container;
+//     return array;}
+// }
+// console.log(arrayShuffle([9,8,0,4], 0));
+// console.log(arrayShuffle([9,8,0,4], 1));
+// console.log(arrayShuffle([9,8,0,4], 2))
+
 //256 - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // Приклад
