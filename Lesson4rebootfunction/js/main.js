@@ -1,7 +1,7 @@
 // 1) створити функцію яка приймає масив та виводить його
 //  arrayfunc() {
 //
-// let newarray = [1,'s', 'dffq'];
+// let newarray = [];
 //     console.log(newarray);
 //
 // }
@@ -21,26 +21,30 @@
 //
 // arrayfunc();
 // 3) створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
-// function minback(a,b,c) {
-//     if (a > c && b > c) min = c;
-//     if (a > b && c > b) min = b;
-//     if (c > a && b > a) min = a;
+// const minnumber = (a,b,c) => {
+//     let number =[a,b,c] ;
+//     let min = a;
+//     for (const aElement of number) {
+//         if(min > aElement) min = aElement;
 //
-// console.log('min: ',min);
+//     }
 //
-//
+//     console.log('min: ',min)
 // }
-//
-// minback(54,0,8)
+//     minnumber(31,14,64);
 
 // 4) створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-// function maxnumber(a,b,c) {
-//     if (a > c && a > b)  max = a;
-//     if (b > a && b > c)  max = b;
-//     if (c > b && c > a)  max = c;
+// const maxnumber = (a,b,c) => {
+//     let number =[a,b,c] ;
+//     let max = a;
+//     for (const aElement of number) {
+//         if(max < aElement) max = aElement;
+//
+//     }
+//
 // console.log('max: ',max)
 // }
-// maxnumber(3.14,1,2.1)
+// maxnumber(3,14,64);
 
 // // 5) створити функцію яка повертає найбільше число з масиву
 // const maxarr = (array) => {
@@ -150,15 +154,49 @@
 // console.log(newtask)
 // ============================================================================================
 //- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+//  походу так  умова незрозуміла
+// function numbers() {
+//     let min = arguments[0];
+//     for (const key in arguments) {
+//         if (min < arguments[key])min = arguments[key];
+//     }
+//
+//     console.log(min)
+// }
+// numbers(1,6,8,5);
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
 //   Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
-// - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+// let array = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+// let valuesObject = (array,flag) => {
+//     let key = [];
+//     if (flag){
+//         for (const arrayElement of array) {
+//             for (const arrayElementElement in arrayElement) {
+//                 key.push(arrayElement[arrayElementElement])
+//             }
+//         }
+//         return console.log(key)
+//
+// }else
+//     {
+//
+//         for (const arayKey of array) {
+//             for (const arayKeyKey in arayKey) {
+//                 key.push(arayKeyKey)
+//             }
+//         }
+//         return console.log(key)
+//     }
+// }
+// valuesObject(array,false)
+// valuesObject(array,true)
+//255 - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 
-// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+//256 - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // Приклад
 // [1,0,6,0,3] => [1,6,3,0,0]
