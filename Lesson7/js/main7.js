@@ -19,6 +19,25 @@
 //     При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік
 //       чи менше він ніж 18, та повідомити про це користувача
 
+const forma = document.forms.checkAge;
+forma.age.oninput = (e) => {
+    console.log(e.value)
+};
+//     function getAge() {
+//         let inputs = document.getElementsByTagName('input');
+//         for (const input of inputs) {
+//             if (input.value > 18) alert('Немає 18');
+//             console.log(input.value)
+//         }
+//     }
+
+// ---------------------------------------------------------
+// document.forms.checkAge.onsubmit = (e) => {
+//     e.preventDefault();
+//     document.forms.checkAge.age.value >= 18 ? alert('Вы совершеннолетний') : alert('Вы еще не совершеннолетний');
+// }
+
+// ---------------------------------------------------------
 // - Створіть меню, яке розгортається/згортається при клику
 // - Створіть список коментарів , приклад об'єкту коментаря - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 // Вивести список коментарів в документ, кожний в своєму блоці.
